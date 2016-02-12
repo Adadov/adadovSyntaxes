@@ -1,0 +1,41 @@
+{
+    "scopeName": "source.cfgfile", 
+    "name": "cfgFiles", 
+    "fileTypes": [
+        "cfg"
+    ], 
+    "uuid": "e5c3d38b-0f90-40a4-a48a-cb0fe67bd416", 
+    "patterns": [
+        {
+            "match": "^([^=]+)\\s*(=)\\s*(.*)$", 
+            "name": "keyword.control.conffile", 
+            "captures": {
+                "1": {
+                    "name": "keyword.other.conffile"
+                }, 
+                "3": {
+                    "name": "variable.parameter.conffile"
+                }, 
+                "2": {
+                    "name": "string"
+                }
+            }
+        }, 
+        {
+            "match": "^;.*", 
+            "name": "comment.line"
+        }, 
+        {
+            "match": "^#.*", 
+            "name": "comment.line"
+        }, 
+        {
+            "match": "^#+", 
+            "name": "comment.block"
+        }, 
+        {
+            "match": "\\[.*\\]", 
+            "name": "string"
+        }
+    ]
+}

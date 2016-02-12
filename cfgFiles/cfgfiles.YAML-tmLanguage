@@ -1,0 +1,15 @@
+fileTypes: [cfg]
+name: cfgFiles
+patterns:
+- captures:
+    '1': {name: keyword.other.conffile}
+    '2': {name: string}
+    '3': {name: variable.parameter.conffile}
+  match: ^([^=]+)\s*(=)\s*(.*)$
+  name: keyword.control.conffile
+- {match: ^;.*, name: comment.line}
+- {match: ^#.*, name: comment.line}
+- {match: ^#+, name: comment.block}
+- {match: '\[.*\]', name: string}
+scopeName: source.cfgfile
+uuid: e5c3d38b-0f90-40a4-a48a-cb0fe67bd416
